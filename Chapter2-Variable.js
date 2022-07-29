@@ -40,8 +40,33 @@ let nullType = null;
 console.log(typeof nullType); // ? why typeof null is Object in js
 
 //>>>>   ==  and ===  equalitity  of
-
 // two same string and number variable can checked using equlaity operators
 // isEqual of Java Doesn't work with JS .
 /* two array an object can not be directly checked to be eaqual , even if they have the same value because they 
 are stored on diffrent memory location and need to check with each value of Object */
+
+//>>>>>>> Algorithm to check wheather the given objest sare same or not
+function checkObjects(a, b) {
+  // check the own property of each Object
+  aParam = Object.getOwnPropertyNames(a);
+  bParam = Object.getOwnPropertyNames(b);
+
+  // if inputsa are of arrays types
+
+  // first check if lenght of both the Objects are equal or not
+  if (aParam.length != bParam.length) {
+    return "Objects are not Same";
+  }
+  // check for theeach property of Object
+  for (let i = 0; i < aParam.length; i++) {
+    let propName = aParam[i];
+    if (a[propName] !== b[propName]) {
+      return "Objectr are not the Same";
+    }
+  }
+
+  // if every thing Mached properly
+  return "Objects are Same";
+}
+
+console.log(checkObjects([{ hi: 12, h2: 344 }], [{ hi: 12, h2: 344 }]));
