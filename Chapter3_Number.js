@@ -23,4 +23,7 @@ console.log(Number.EPSILON);
 function numberisEqual(x, y) {
   return Math.abs(x - y) < Number.EPSILON;
 }
-console.log(numberisEqual(0.2 + 0.2, 0.3));
+console.log(numberisEqual(0.2 + 0.2, 0.3)); //False because Number.EPSILIOn will less then the  difference
+console.log(numberisEqual(0.1 + 0.2, 0.3)); //True  because Number.EPSILIOn will greater  then tthe difference.
+
+// Number.MAX_SAFE_INTEGER     => returns maxium number
