@@ -52,6 +52,7 @@ function checkObjects(a, b) {
   bParam = Object.getOwnPropertyNames(b);
 
   // if inputsa are of arrays types
+  if(typeof a==)
 
   // first check if lenght of both the Objects are equal or not
   if (aParam.length != bParam.length) {
